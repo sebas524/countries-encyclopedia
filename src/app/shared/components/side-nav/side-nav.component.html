@@ -36,7 +36,6 @@
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
-            href="#"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
@@ -50,12 +49,17 @@
               >
             </li>
             <li>
+              <a class="dropdown-item" routerLink="search/by-capital"
+                >by capital</a
+              >
+            </li>
+            <li>
               <a class="dropdown-item" routerLink="search/by-region"
                 >by region</a
               >
             </li>
             <li>
-              <a class="dropdown-item" routerLink="search/country-id"
+              <a class="dropdown-item" routerLink="search/by-country/:id"
                 >specific country</a
               >
             </li>
@@ -65,17 +69,3 @@
     </div>
   </div>
 </nav>
-
-<!--
-<div class="sidebar">
-  <div class="logo" routerLink="countries/home">
-    <h2>Country-wiki</h2>
-    <small>the free country encyclopedia!</small>
-  </div>
-  <button [routerLink]="'search/by-countries'" routerLinkActive="active" class="dropdown">
-    search
-  </button>
-  <button [routerLink]="'/about'" routerLinkActive="active">about</button>
-  <button [routerLink]="'/contact'" routerLinkActive="active">contact</button>
-</div>
- -->
