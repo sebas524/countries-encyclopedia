@@ -1,1 +1,18 @@
-<p>by-countries works!</p>
+<h2>by country</h2>
+<hr />
+
+<div class="row">
+  <div class="col-sm-8">
+    <!-- !search bar: -->
+    <shared-search-bar
+      barPlaceholder="Enter a specific capital..."
+      (onValue)="searchByCountry($event)"
+    ></shared-search-bar>
+  </div>
+</div>
+<div class="row mt-4">
+  <div class="col">
+    <!-- !TABLE: -->
+    <shared-info-table [countries]="countries"></shared-info-table>
+  </div>
+</div>
