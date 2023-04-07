@@ -7,11 +7,15 @@
     <shared-search-bar
       barPlaceholder="Enter a specific capital..."
       (onValue)="searchByCountry($event)"
+      (onDebounce)="searchByCountry($event)"
+      [initialValue]="initialValue"
     ></shared-search-bar>
   </div>
 </div>
 <div class="row mt-4">
   <div class="col">
+    <!-- !LOADING -->
+    <shared-loading *ngIf="loading"></shared-loading>
     <!-- !TABLE: -->
     <shared-info-table [countries]="countries"></shared-info-table>
   </div>

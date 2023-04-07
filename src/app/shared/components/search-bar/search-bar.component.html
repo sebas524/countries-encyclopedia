@@ -1,7 +1,9 @@
 <input
   class="form-control"
   type="text"
+  [value]="initialValue"
   #txtSearchInput
   (keyup.enter)="valueEmitter(txtSearchInput.value)"
   [placeholder]="barPlaceholder"
+  (keyup)="whenKeyIsPressed(txtSearchInput.value)"
 />
